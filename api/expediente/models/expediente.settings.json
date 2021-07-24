@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expedientes",
+  "info": {
+    "name": "expediente",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "fecha": {
+      "type": "datetime"
+    },
+    "fechaDeNacimiento": {
+      "type": "date"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "codigoPostal": {
+      "type": "string"
+    },
+    "colonia": {
+      "type": "string"
+    },
+    "ciudad": {
+      "type": "string"
+    },
+    "numeroCelular": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "string"
+    },
+    "ocupacion": {
+      "type": "string"
+    },
+    "embarazo": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
